@@ -1,0 +1,23 @@
+{
+  "name": "nodecli",
+  "version": "1.0.0",
+  "description": "Node.jsでCLIアプリケーション",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t2o-y/nodecli.git"
+  },
+  "keywords": [],
+  "author": "t2o-y",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/t2o-y/nodecli/issues"
+  },
+  "homepage": "https://github.com/t2o-y/nodecli#readme",
+  "dependencies": {
+    "commander": "^9.0.0"
+  }
+}
