@@ -2,8 +2,8 @@
 const program = require("commander");
 // fsモジュールをfsオブジェクトとしてインポートする
 const fs = require("fs");
-// markedモジュールをmarkedオブジェクトとしてインポートする
-const md = require("marked");
+// md2htmlモジュールをインポートする
+const md = require("./md2html");
 
 // gfm(Git Flavored Markdown)オプションを定義する
 program.option("--gfm", "GFMを有効にする");
@@ -27,9 +27,6 @@ fs.readFile(filePath, {encoding: "utf8"}, (err, file) => {
         return;
     }
     // MarkdownファイルをHTML文字列に変換する
-    const html = md.marked(file,{
-        // オプションの値を使用する
-        gfm: cliOptions.gfm,
-    });
+    const html = md2html(file, cliOptions);
     console.log(html);
 });
